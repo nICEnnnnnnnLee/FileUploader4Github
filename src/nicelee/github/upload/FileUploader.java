@@ -13,6 +13,16 @@ import java.util.regex.Pattern;
 
 public class FileUploader {
 
+	
+	public static void main(String args[]) {
+		String url = args[0];
+		File file = new File(args[1]);
+		String token = args[2];
+		create(url, file, token);
+		//update(url, file, token);
+	}
+	
+	
 	/**
 	 * 由于没有考虑sha，故而只能新建文件，而不能更新文件(更新文件需要先get访问得到sha，然后再put)
 	 * 
